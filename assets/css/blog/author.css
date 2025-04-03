@@ -14,12 +14,14 @@
 
 .author-list {
     display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .author-list .author-image-placeholder {
-    flex-shrink: 0;
-    width: 54px;
-    margin: 0 -4px;
+    width: 24px;
+    height: 24px;
     overflow: hidden;
     border: 2px solid var(--white-color);
     border-radius: 50%;
