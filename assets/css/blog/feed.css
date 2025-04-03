@@ -83,7 +83,7 @@
     gap: 0.4rem;
     margin-right: 1.5rem;
     font-size: 1.1rem;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.5;
     color: var(--brand-color);
     white-space: nowrap;
@@ -148,7 +148,10 @@
     white-space: normal;
 }
 
-.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .feed-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not(
+        [class^="gh-font-heading"]
+    )
+    .feed-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -163,7 +166,8 @@
     -webkit-box-orient: vertical;
 }
 
-.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .feed-excerpt {
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"])
+    .feed-excerpt {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 
@@ -256,7 +260,7 @@
     padding: 1rem 1.5rem;
     margin: 0 -1.5rem;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 900;
     color: var(--darker-gray-color);
     text-transform: uppercase;
     letter-spacing: 0.05rem;
