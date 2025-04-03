@@ -1,0 +1,6 @@
+301:
+  #site structural pages
+  ^/sitemap_index.xml: /sitemap.xml
+  /feed/: /blog/rss/
+
+  #blog posts

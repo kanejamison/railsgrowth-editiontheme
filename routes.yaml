@@ -1,0 +1,23 @@
+routes:
+  /feeds/kanejamison/:
+    permalink: /feeds/kanejamison/
+    template: feeds-authors
+    content_type: text/xml
+
+collections:
+  /articles/:
+    permalink: /articles/{slug}/
+    filter: primary_tag:articles
+    data: tag.articles
+  /tools/:
+    permalink: /tools/{slug}/
+    filter: primary_tag:tools
+    data: tag.tools
+  /resources/:
+    permalink: /resources/{slug}/
+    filter: primary_tag:resources
+    data: tag.resources
+
+taxonomies:
+  author: /author/{slug}/
+  tag: /{slug}/
