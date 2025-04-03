@@ -1,8 +1,7 @@
 routes:
   /:
-    controller: channel
-    template: index
-    data: page.posts
+    template: home
+    data: page.home
   /feeds/kanejamison/:
     permalink: /feeds/kanejamison/
     template: feeds-authors

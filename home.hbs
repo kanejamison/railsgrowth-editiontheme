@@ -1,0 +1,17 @@
+{{!< default}}
+<main class="site-main">
+    <header class="feed-header gh-canvas">
+        <div class="feed-header-wrapper">
+            <h1 class="feed-header-title">RailsGrowth</h1>
+        </div>
+    </header>
+    <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+    {{#if pagination}}
+        {{pagination}}
+    {{/if}}
+</main>
+{{#contentFor "body_class"}}{{#if @site.cover_image}} with-full-cover is-head-transparent{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}
