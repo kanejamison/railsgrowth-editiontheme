@@ -34,6 +34,9 @@
             <div class="feed-visibility feed-visibility-{{visibility}}">
                 {{> "icons/star"}}
             </div>
+            <div class="feed-date">
+                {{date published_at format="YYYY"}}
+            </div>
             {{#if reading_time}}
                 <div class="feed-length">
                     {{reading_time}}
