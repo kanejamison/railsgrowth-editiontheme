@@ -5,39 +5,34 @@
 
             <h1 class="single-title">{{title}}</h1>
 
-            {{#is "post"}}
+            {{#has tag="articles"}}
             <div class="single-meta">
                 <span class="single-meta-item single-meta-date">
                     <time datetime="{{date format="YYYY-MM-DD"}}">
-                        {{date published_at format="DD MMM YYYY"}}
+                        {{date published_at format="MMMM DD, YYYY"}}
                     </time>
                 </span>
                 <span class="single-meta-item single-meta-length">
                     {{reading_time}}
                 </span>
-                {{#primary_tag}}
-                    <span class="single-meta-item single-meta-tag">
-                        <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
+                <span class="single-meta-item">
+                    <span class="author-list">
+                        {{#foreach authors}}
+                            <span class="author-image-placeholder u-placeholder square">
+                                {{#if profile_image}}
+                                    <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                                {{else}}
+                                    <span class="u-object-fit">{{> "icons/avatar"}}</span>
+                                {{/if}}
+                            </span>
+                            <span class="author-name">
+                                <a href="https://railsgrowth.com/about/">{{name}}</a>
+                            </span>
+                        {{/foreach}}
                     </span>
-                {{/primary_tag}}
+                </span>
             </div>
-            <div class="single-meta">
-                <div class="author-list">
-                    {{#foreach authors}}
-                        <div class="author-image-placeholder u-placeholder square">
-                            {{#if profile_image}}
-                                <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
-                            {{else}}
-                                <span class="u-object-fit">{{> "icons/avatar"}}</span>
-                            {{/if}}
-                        </div>
-                        <div class="author-name">
-                            <a href="https://railsgrowth.com/about/">{{name}}</a>
-                        </div>
-                    {{/foreach}}
-                </div>
-            </div>
-            {{/is}}
+            {{/has}}
         </header>
     {{/match}}
 

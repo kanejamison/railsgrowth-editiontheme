@@ -20,7 +20,11 @@
     word-break: break-word;
 }
 
-.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .featured-wrapper .post-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not(
+        [class^="gh-font-heading"]
+    )
+    .featured-wrapper
+    .post-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -35,8 +39,4 @@
 
 .featured-feed {
     opacity: 0;
-}
-
-.featured-feed.tns-slider {
-    opacity: 1;
 }

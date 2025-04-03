@@ -10,7 +10,6 @@
 @import "site/layout.css";
 
 @import "blog/author.css";
-@import "blog/featured.css";
 @import "blog/feed.css";
 @import "blog/images.css";
 @import "blog/navigation.css";
@@ -24,5 +23,4 @@
 
 @import "misc/animations.css";
 @import "misc/portal.css";
-@import "misc/tiny-slider.css";
 @import "misc/utils.css";
