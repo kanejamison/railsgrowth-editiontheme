@@ -1,5 +1,6 @@
 routes:
   /:
+    controller: channel
     template: index
     data: page.posts
   /feeds/kanejamison/:
