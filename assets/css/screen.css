@@ -19,3 +19,5 @@
 @import "misc/utils.css";
 @import "misc/portal.css";
 @import "misc/animations.css";
+
+@import "blog/prismjs.css";
