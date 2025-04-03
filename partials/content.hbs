@@ -20,8 +20,22 @@
                         <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
                     </span>
                 {{/primary_tag}}
-                <br>
-                <div class="author-name">{{authors}}</div>
+            </div>
+            <div class="single-meta">
+                <div class="author-list">
+                    {{#foreach authors}}
+                        <div class="author-image-placeholder u-placeholder square">
+                            {{#if profile_image}}
+                                <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+                            {{else}}
+                                <span class="u-object-fit">{{> "icons/avatar"}}</span>
+                            {{/if}}
+                        </div>
+                        <div class="author-name">
+                            {{authors}}
+                        </div>
+                    {{/foreach}}
+                </div>
             </div>
             {{/is}}
         </header>
@@ -46,24 +60,7 @@
         </div>
 
         <div class="single-footer-middle">
-            {{#if @custom.show_author}}
-            <div class="single-footer-top">
-                <h3 class="single-footer-title">Published by:</h3>
-                <div class="author-list">
-                    {{#foreach authors}}
-                        <div class="author-image-placeholder u-placeholder square">
-                            <a href="{{url}}" title="{{name}}">
-                                {{#if profile_image}}
-                                    <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
-                                {{else}}
-                                    <span class="u-object-fit">{{> "icons/avatar"}}</span>
-                                {{/if}}
-                            </a>
-                        </div>
-                    {{/foreach}}
-                </div>
-            </div>
-            {{/if}}
+
         </div>
 
         <div class="single-footer-right">

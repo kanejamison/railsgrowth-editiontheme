@@ -8,7 +8,7 @@
 }
 
 .single-meta {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--secondary-text-color);
@@ -29,7 +29,10 @@
     word-break: break-word;
 }
 
-.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) .single-title {
+.has-serif-title:not([class*=" gh-font-heading"]):not(
+        [class^="gh-font-heading"]
+    )
+    .single-title {
     font-family: var(--gh-font-heading, var(--font-serif));
 }
 
@@ -39,7 +42,8 @@
     word-break: break-word;
 }
 
-.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .single-excerpt {
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"])
+    .single-excerpt {
     font-family: var(--gh-font-body, var(--font-serif));
 }
 
