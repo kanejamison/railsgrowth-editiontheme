@@ -5,7 +5,7 @@
             <h2 class="feed-header-title">Latest Posts</h2>
         </div>
     </header>
-    <div class="post-feed right-thumbnail gh-feed gh-canvas">
+    <div class="post-feed expanded right-thumbnail gh-feed gh-canvas">
         {{#get "posts" limit="all" include="tags,authors"}}
             {{#foreach posts}}
                 {{> "loop"}}
