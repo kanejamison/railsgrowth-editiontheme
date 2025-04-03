@@ -32,6 +32,9 @@
             <div class="feed-excerpt">{{excerpt words="20"}}</div>
         {{/if}}
         <div class="feed-right">
+            <span class="tag" style="background-color: {{primary_tag.accent_color}}">
+                {{primary_tag.name}}
+            </span>
             <time class="feed-date" datetime="{{date format="YYYY-MM-DD"}}">
                 {{date published_at format="DD MMM YYYY"}}
             </time>
