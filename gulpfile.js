@@ -9,7 +9,6 @@ const postcss = require('gulp-postcss');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const beeper = require('beeper');
-const zip = require('gulp-zip');
 
 // postcss plugins
 const easyimport = require('postcss-easy-import');
@@ -75,7 +74,8 @@ function js(done) {
     ], handleError(done));
 }
 
-function zipper(done) {
+async function zipper(done) {
+    const {default: zipModule} = await import('gulp-zip');
     const filename = require('./package.json').name + '.zip';
 
     pump([
@@ -85,7 +85,7 @@ function zipper(done) {
             '!dist', '!dist/**',
             '!yarn-error.log'
         ]),
-        zip(filename),
+        zipModule(filename),
         dest('dist/')
     ], handleError(done));
 }
@@ -97,5 +97,5 @@ const watcher = parallel(hbsWatcher, cssWatcher, jsWatcher);
 const build = series(css, js);
 
 exports.build = build;
-exports.zip = series(build, zipper);
+exports.zip = series(build, (done) => zipper(done));
 exports.default = series(build, serve, watcher);
