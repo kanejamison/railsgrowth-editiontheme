@@ -2,13 +2,15 @@
 <main class="site-main">
     <header class="feed-header gh-canvas">
         <div class="feed-header-wrapper">
-            <h1 class="feed-header-title">RailsGrowth</h1>
+            <h2 class="feed-header-title">Latest Posts</h2>
         </div>
     </header>
-    <div class="post-feed{{#match @custom.feed_layout "!=" "Minimal"}} expanded{{/match}}{{#match @custom.feed_layout "Right thumbnail"}} right-thumbnail{{/match}}{{#match @custom.feed_layout "Text-only"}} text-only{{/match}} gh-feed gh-canvas">
-        {{#foreach posts}}
-            {{> "loop"}}
-        {{/foreach}}
+    <div class="post-feed right-thumbnail gh-feed gh-canvas">
+        {{#get "posts" limit="all" include="tags,authors"}}
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+        {{/get}}
     </div>
     {{#if pagination}}
         {{pagination}}
