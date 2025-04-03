@@ -1,4 +1,7 @@
 routes:
+  /:
+    template: index
+    data: page.posts
   /feeds/kanejamison/:
     permalink: /feeds/kanejamison/
     template: feeds-authors
