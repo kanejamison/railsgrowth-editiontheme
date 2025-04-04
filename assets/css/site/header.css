@@ -3,8 +3,22 @@
 }
 
 .gh-head-logo {
+    display: flex;
+    align-items: center;
     font-size: 2.2rem;
     font-weight: 900;
+    gap: 0.25rem;
+    transition: padding 0.3s ease;
+}
+
+.gh-head-logo:hover {
+    padding-left: 0.25rem;
+}
+
+.gh-head-logo-image {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 0 1.25rem white);
 }
 
 .gh-head-menu,
