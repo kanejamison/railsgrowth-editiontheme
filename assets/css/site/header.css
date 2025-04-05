@@ -19,6 +19,19 @@
     width: 48px;
     height: 48px;
     filter: drop-shadow(0 0 1.25rem white);
+    animation: pulse 5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        filter: drop-shadow(0 0 1.25rem rgba(255, 255, 255, 0.9));
+    }
+    50% {
+        filter: drop-shadow(0 0 1.25rem rgba(255, 255, 255, 0.6));
+    }
+    100% {
+        filter: drop-shadow(0 0 1.25rem rgba(255, 255, 255, 0.9));
+    }
 }
 
 .gh-head-menu,
